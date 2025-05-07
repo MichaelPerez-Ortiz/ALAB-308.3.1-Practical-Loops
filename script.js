@@ -40,7 +40,7 @@ for (let i = 1; i < table.length; i++) {
                 id:table[i][0],
                 names:table[i][1],
 				occupation:table[i][2],
-				age:table[i][3]\
+				age:table[i][3]
 	}
 		newNames.push(obj)
 }
@@ -52,7 +52,7 @@ for (let i = 1; i < table.length; i++) {
 newNames.pop();
 	// console.log(newNames);
 
-newNames.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+newNames.splice( 1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
 	// console.log(newNames);
 
 newNames.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
@@ -60,4 +60,14 @@ newNames.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 //average
 
-let avgAge = 0;
+function avgAge(newNames) {
+	let sum = 0;
+
+		for(let i = 0; i < newNames.length; i++){
+			sum = sum + newNames[i].age * 1;//not sure why 0s are added to the number if I dont multiply by 1
+			
+		}
+			return sum / newNames.length;
+		
+}
+console.log("The average is" , avgAge(newNames));
