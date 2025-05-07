@@ -25,7 +25,7 @@ for (let i = 0; i < csv.length; i++) {
 	}
 }
 
-console.log(table)
+// console.log(table)
 
 
 //part3
@@ -44,6 +44,20 @@ for (let i = 1; i < table.length; i++) {
 	}
 		newNames.push(obj)
 }
-	console.log(newNames)
+	// console.log(newNames)
 
 //part4
+
+
+newNames.pop();
+	// console.log(newNames);
+
+newNames.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" });
+	// console.log(newNames);
+
+newNames.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+	console.log(newNames);
+
+//average
+
+let avgAge = 0;
